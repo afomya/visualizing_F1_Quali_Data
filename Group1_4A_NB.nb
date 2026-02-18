@@ -1,0 +1,74 @@
+Notebook[{Cell[
+BoxData[RowBox[{"data","="," ",RowBox[{"Import","[","\"Assignment_4/monza_3d_data.csv\"","]"}]}]],
+"Input",CellLabel -> "In[95]:= ",ExpressionUUID -> "0d2c5e96-4f29-47f5-8b21-97639185fffc"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"ListLinePlot","[","\n","  ",RowBox[{RowBox[{"data","[",RowBox[
+{"[",RowBox[{"All",","," ",RowBox[{"{",RowBox[{"1",","," ","2"}],"}"}]}],"]"}],"]"}],",","   ",RowBox[
+{"(*"," ",RowBox[{"take"," ","columns"," ","1"," ",RowBox[{"(","x",")"}]," ","and"," ","2"," ",RowBox[
+{"(","y",")"}]}]," ","*)"}],"\n","  ",RowBox[{"AspectRatio"," ","\[Rule]"," ","Automatic"}],",","\n","  ",RowBox[
+{"PlotStyle"," ","\[Rule]"," ","Thick"}],",","\n","  ",RowBox[{"AxesLabel"," ","\[Rule]"," ",RowBox[
+{"{",RowBox[{"\"X\"",","," ","\"Y\""}],"}"}]}],",","\n","  ",RowBox[{"PlotRange"," ","\[Rule]"," ","All"}]}],"\n","]"}]],
+"Input",ExpressionUUID -> "15535f40-d460-4bd8-bccb-9b98d7dcd1a2"],Cell[
+BoxData[GraphicsBox[
+{{},{{{},{},TagBox[{Hue[0.67`,0.6`,0.6`],Directive[PointSize[NCache[Rational[1,90],
+0.011111111111111112`]],RGBColor[0.24`,0.6`,0.8`],AbsoluteThickness[2],Thickness[
+Large]],LineBox[CompressedData["1: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"]]},
+Function[Annotation[Slot[1],"Charting`Private`Tag#1"]]]}},{{},{}}},{DisplayFunction -> Identity,Axes -> {True,True},AxesLabel -> {FormBox[
+TagBox["\"X\"",HoldForm],TraditionalForm],FormBox[TagBox["\"Y\"",HoldForm],TraditionalForm]},AxesOrigin -> {0,0},RuleDelayed[
+DisplayFunction,Identity],Frame -> {{False,False},{False,False}},FrameLabel -> {{None,None},{None,None}},FrameTicks -> {{Automatic,Automatic},{Automatic,Automatic}},GridLines -> {None,None},GridLinesStyle -> Directive[
+GrayLevel[0.5`,0.4`]],Method -> CompressedData["1:eJzlVltsTEEY3q0qeqEukZIgJRLx4kEi8cColm2TLts9y5MHp3vm7I6enlkzc2S3Eg8SDxJvvBAh6kGKeJBWkHjxQKh71KWXUIo24hYikZD455y9226J48kku/nPnJnv/+b/vzP/X9tKg/oMj8fDS+GvmXChl6SegpaBlQow6uKEB1RNI2ZE98q3ZfCnhFUDa2z3nHO+4Y5DKG/bHDAasK5ahlhPLVNTWUIRCQPzaRLPErRdFSSct2l+ZpOPqbEoCfMmU2CmhgWhpj6pCM0pYGzFjMM6ttIen/MpzQIjBFhtfmpxHKCc2Kgl2ai2EWIW5pPB2KgaHBdwtEHXcVjwooTkORtJJGrATzhRG2el9MQgGpTI+byX07NhApSYf4ElKTUwGjOIiXnuuQuESmcY65S111uMU+anGk4HpwBuzFDDuB2boiiupB5XZNjqDKPAu4QiHzdRM99FdUYZfsyjtpScQMyUYK2cGpbAdnwU0oFJ2a+nz4IIGFQ4EAWUb0eJMEgw2YWdFE+VGL719dSgjF1cuO9ty8U7KCmzl4gdOSzHGPqVUAgk3AbB5lnpmAhft8d7xE5/euBvrR5BbE3545OxNVddwl8k6S8cQklHrxEb7pDf8E2X8B/2fF27Zd87xAZXHD9bc+4JYst83s7t19zCf3Vv8cC3PS8QC9qZeJ5KxFuX8IM9Q6XPukcRO7p5wZlDxwYQ+zhv/72pqy67hO+o5SlK3pyQX489PrqEn0JLGqMpA/a7yH8MZQ7iJGLUJf7fu6TuISy3b8kx4jb/RlvuoE/H6Evpp9cl/stXL22YdQrCsq7vS4uv23V90ooTVTtqPyAWrf/+Zu8I3D/9fXcr+6+fdwn/gGdn3aWDbxC78PnHw/jYI8SaV23a1lvz3CX8zsDKJf0f7qeuHbh/IoM3riyLD/wmfvpCr5KOoI8g5h/2JpXSUM0IHm+fo+yu/H2zwdgcE6QdKowsIX6VtUHLMV5ZlMubzLBhaThdwcFb0Q4op9xP3DC5w0gph3ko8wzKt4Lza/a/pTRXuqaUQR5UgXmIUkPupmbxBmWGLTIOXUdio2U67aE3JbX0TC6CN32F5CxKzzRpcH4iEpkGSwH+xJujvIDKRIEFJA3+zzwU+AJm28GLEaxtVQ0L/0+R+AktRljn"],RuleDelayed[
+PlotInteractivity,True],PlotRange -> {{-1499.`,11067.`},{-5802.`,15884.`}},PlotRangeClipping -> True,PlotRangePadding -> {{Scaled[
+0.02`],Scaled[0.02`]},{Scaled[0.05`],Scaled[0.05`]}},Ticks -> {Automatic,Automatic},RuleDelayed[
+PlotInteractivity,True]},ExpressionUUID -> "e59aed35-5054-4e45-a3b4-b0274c84f268"],
+StandardForm],"Output",CellLabel -> "Out[94]= ",ExpressionUUID -> "90c5dedc-0eb8-4f21-8b0e-bc7cec86cfd6"]},
+Open],ExpressionUUID -> "5c8f6074-71ca-4bbc-99af-7a4d40458821"],Cell[
+BoxData[{RowBox[
+{RowBox[{"(*",RowBox[{RowBox[{" ","0",")"}]," ","import"," ","your"," ","data"}]," ","*)"}],"\n",RowBox[
+{RowBox[{"data"," ","="," ",RowBox[{"Import","[","\"monza_3d_data.csv\"","]"}]}],";"}]}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{"(*",RowBox[{RowBox[{" ","1",")"}]," ","scale"," ","XY"," ","so"," ","the"," ","longest"," ","side"," ",RowBox[
+{"is"," ","~","100"}]," ","mm"}]," ","*)"}],"\n",RowBox[{RowBox[{"xy"," ","="," ",RowBox[
+{"data","[",RowBox[{"[",RowBox[{"All",","," ",RowBox[{"{",RowBox[{"1",","," ","2"}],"}"}]}],"]"}],"]"}]}],";"}]}],"\n",RowBox[
+{RowBox[{RowBox[{"{",RowBox[{"minx",","," ","maxx"}],"}"}]," ","="," ",RowBox[{"MinMax","[",RowBox[
+{"xy","[",RowBox[{"[",RowBox[{"All",","," ","1"}],"]"}],"]"}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{RowBox[{"{",RowBox[{"miny",","," ","maxy"}],"}"}]," ","="," ",RowBox[{"MinMax","[",RowBox[
+{"xy","[",RowBox[{"[",RowBox[{"All",","," ","2"}],"]"}],"]"}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{"scale"," ","="," ",RowBox[{"100","/",RowBox[{"Max","[",RowBox[{RowBox[{"maxx"," ","-"," ","minx"}],","," ",RowBox[
+{"maxy"," ","-"," ","miny"}]}],"]"}]}]}],";"}],"\n",RowBox[{RowBox[{"scaledXY"," ","="," ",RowBox[
+{"xy","*","scale"}]}],";"}],RowBox[{"\n","\n"}],RowBox[{RowBox[{"(*",RowBox[{RowBox[
+{" ","2",")"}]," ","make"," ","a"," ","3","D"," ","tube"," ",RowBox[{"(",RowBox[{"\[TildeTilde]",RowBox[
+{"5"," ","mm"," ","wide"}]}],")"}]," ","and"," ","convert"," ","to"," ","a"," ","mesh"}]," ","*)"}],"\n",RowBox[
+{RowBox[{"gfx"," ","="," ",RowBox[{"Graphics3D","[","\n","   ",RowBox[{RowBox[{"Tube","[",RowBox[
+{RowBox[{"Line","[","scaledXY","]"}],","," ","2.5"}],"]"}],",","   ",RowBox[{"(*"," ",RowBox[
+{RowBox[{"2.5"," ","mm"," ","radius"}]," ","->"," ",RowBox[{RowBox[{"~","5"}]," ","mm"," ","wide"}]}]," ","*)"}],"\n","   ",RowBox[
+{"Boxed"," ","\[Rule]"," ","False"}],","," ",RowBox[{"Lighting"," ","\[Rule]"," ","\"Neutral\""}]}],"\n","]"}]}],";"}]}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{"mesh"," ","="," ",RowBox[{"BoundaryDiscretizeGraphics","[",RowBox[
+{"gfx",","," ",RowBox[{"MaxCellMeasure"," ","\[Rule]"," ","0.5"}]}],"]"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{"(*"," ",RowBox[{"sanity"," ","checks"}]," ","*)"}],"\n",RowBox[
+{"{",RowBox[{RowBox[{"Head","[","mesh","]"}],","," ",RowBox[{"RegionQ","[","mesh","]"}],","," ",RowBox[
+{"MeshCellCount","[",RowBox[{"mesh",","," ","2"}],"]"}]}],"}"}]}],RowBox[{"\n","\n"}],RowBox[
+{RowBox[{"(*",RowBox[{RowBox[{" ","3",")"}]," ","export"," ","to"," ","your"," ","Wolfram"," ","Cloud"," ","as"," ","STL"}]," ","*)"}],"\n",RowBox[
+{RowBox[{"co"," ","="," ",RowBox[{"CloudExport","[",RowBox[{"mesh",","," ","\"STL\"",","," ","\"monza_track_100mm_wide_5mm_tube.stl\""}],"]"}]}],";"}]}],"\n",RowBox[
+{"co","\n"}]}],"Input",CellLabel -> "In[1]:= ",ExpressionUUID -> "aa262b30-b8c2-43df-b20e-0df9adb1b28c"],Cell[
+BoxData[
+TemplateBox[{"Import","nffil","\"File \\!\\(\\*TagBox[\\\"\\\\\\\"monza_3d_data.csv\\\\\\\"\\\", Short[#1, 5] & ]\\) not found during \\!\\(\\*TagBox[\\\"Import\\\", Short[#1, 5] & ]\\).\"",2,1,7,20204245148525944823,"Local"},
+"MessageTemplate",BaseStyle -> "MSG"],StandardForm],"MSG","Message",ExpressionUUID -> "1e20829c-3e48-4fea-8264-5f666be27446"],Cell[
+BoxData[
+TemplateBox[{"Symbol","argx","\"\\!\\(\\*TagBox[\\\"Symbol\\\", Short[#1, 5] & ]\\) called with \\!\\(\\*TagBox[\\\"0\\\", Short[#1, 5] & ]\\) arguments; 1 argument is expected.\"",2,2,8,20204245148525944823,"Local"},
+"MessageTemplate",BaseStyle -> "MSG"],StandardForm],"MSG","Message",ExpressionUUID -> "d820fffc-53db-419d-b251-2c5a986ae341"],Cell[
+BoxData[
+TemplateBox[{"Symbol","argx","\"\\!\\(\\*TagBox[\\\"Symbol\\\", Short[#1, 5] & ]\\) called with \\!\\(\\*TagBox[\\\"0\\\", Short[#1, 5] & ]\\) arguments; 1 argument is expected.\"",2,3,9,20204245148525944823,"Local"},
+"MessageTemplate",BaseStyle -> "MSG"],StandardForm],"MSG","Message",ExpressionUUID -> "8994f0f2-0fca-45b3-a665-d296bde7789c"],Cell[
+BoxData[
+TemplateBox[{"Symbol","argx","\"\\!\\(\\*TagBox[\\\"Symbol\\\", Short[#1, 5] & ]\\) called with \\!\\(\\*TagBox[\\\"0\\\", Short[#1, 5] & ]\\) arguments; 1 argument is expected.\"",2,4,10,20204245148525944823,"Local"},
+"MessageTemplate",BaseStyle -> "MSG"],StandardForm],"MSG","Message",ExpressionUUID -> "42852ecd-f579-4dcc-9230-f0f22cf6f18c"],Cell[
+BoxData[
+TemplateBox[{"Power","infy","\"Infinite expression \\!\\(\\*TagBox[FractionBox[\\\"1\\\", \\\"0\\\"], Short[#1, 5] & ]\\) encountered.\"",2,5,11,20204245148525944823,"Local"},
+"MessageTemplate",BaseStyle -> "MSG"],StandardForm],"MSG","Message",ExpressionUUID -> "e4e3c946-525f-48ad-b24f-55237b42f58c"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"BoundaryDiscretizeGraphics",",","False",",",RowBox[{"MeshCellCount","[",RowBox[
+{RowBox[{"BoundaryDiscretizeGraphics","[",RowBox[{Graphics3DBox[TubeBox[Line3DBox[
+DirectedInfinity[]],2.5`],Boxed -> False,Lighting -> "Neutral",ExpressionUUID -> "814edc6e-295d-4fd8-9a40-9ff692c229e5"],",",RowBox[
+{"MaxCellMeasure","\[Rule]","0.5`"}]}],"]"}],",","2"}],"]"}]}],"}"}],StandardForm],
+"Output",CellLabel -> "Out[9]= ",ExpressionUUID -> "6b8e9416-9839-4f30-81de-8230559b1100"]},
+StyleDefinitions -> "Default.nb",FrontEndVersion -> "14.3 for Wolfram Cloud 1.74 (September 30, 2025)"]
