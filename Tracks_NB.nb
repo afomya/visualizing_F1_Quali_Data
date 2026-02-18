@@ -1,0 +1,61 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[{RowBox[{"(*"," ",RowBox[{"1."," ","Import"," ","and"," ","clean"," ","data"}]," ","*)"}],"\n",RowBox[
+{RowBox[{"data"," ","="," ",RowBox[{"Import","[","\"Assignment_4/silverstone_dense.csv\"","]"}]}],";"}]}],"\n",RowBox[
+{RowBox[{"If","[",RowBox[{RowBox[{"MatchQ","[",RowBox[{RowBox[{"data","[",RowBox[
+{"[","1","]"}],"]"}],","," ",RowBox[{"{",RowBox[{"_String",".."}],"}"}]}],"]"}],","," ",RowBox[
+{"data"," ","="," ",RowBox[{"Rest","@","data"}]}]}],"]"}],";"}],"\n",RowBox[{RowBox[
+{"xyz"," ","="," ",RowBox[{"DeleteCases","[",RowBox[{RowBox[{"N","[",RowBox[{"data","[",RowBox[
+{"[",RowBox[{"All",","," ",RowBox[{"{",RowBox[{"1",","," ","2",","," ","3"}],"}"}]}],"]"}],"]"}],"]"}],","," ",RowBox[
+{RowBox[{"{",RowBox[{"_",","," ","_",","," ","_Missing"}],"}"}]," ","|"," ",RowBox[
+{"{",RowBox[{"_",","," ","_",","," ",RowBox[{"Missing","[","_","]"}]}],"}"}]}]}],"]"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{"(*"," ",RowBox[{"2."," ","Print"," ","dimensions"}]," ","*)"}],"\n",RowBox[
+{RowBox[{"targetX"," ","="," ","80"}],";"," ",RowBox[{"targetY"," ","="," ","120"}],";"," ",RowBox[
+{"baseH"," ","="," ","2.5"}],";"," ",RowBox[{"hMax"," ","="," ","30"}],";"}]}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{"(*"," ",RowBox[{"3."," ","Scale"," ","coordinates"," ","to"," ","mm"}]," ","*)"}],"\n",RowBox[
+{RowBox[{RowBox[{"{",RowBox[{"minx",","," ","maxx"}],"}"}]," ","="," ",RowBox[{"MinMax","[",RowBox[
+{"xyz","[",RowBox[{"[",RowBox[{"All",","," ","1"}],"]"}],"]"}],"]"}]}],";"}]}],"\n",RowBox[
+{RowBox[{RowBox[{"{",RowBox[{"miny",","," ","maxy"}],"}"}]," ","="," ",RowBox[{"MinMax","[",RowBox[
+{"xyz","[",RowBox[{"[",RowBox[{"All",","," ","2"}],"]"}],"]"}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{RowBox[{"{",RowBox[{"minz",","," ","maxz"}],"}"}]," ","="," ",RowBox[{"MinMax","[",RowBox[
+{"xyz","[",RowBox[{"[",RowBox[{"All",","," ","3"}],"]"}],"]"}],"]"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{"sx"," ","="," ",RowBox[{"targetX","/",RowBox[{"(",RowBox[
+{"maxx"," ","-"," ","minx"}],")"}]}]}],";"}],"\n",RowBox[{RowBox[{"sy"," ","="," ",RowBox[
+{"targetY","/",RowBox[{"(",RowBox[{"maxy"," ","-"," ","miny"}],")"}]}]}],";"}],"\n",RowBox[
+{RowBox[{"sz"," ","="," ",RowBox[{"hMax","/",RowBox[{"(",RowBox[{"maxz"," ","-"," ","minz"}],")"}]}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{"scaled"," ","="," ",RowBox[{"(",RowBox[{RowBox[{RowBox[
+{"{",RowBox[{RowBox[{RowBox[{"(",RowBox[{RowBox[{"#","[",RowBox[{"[","1","]"}],"]"}]," ","-"," ","minx"}],")"}],"*","sx"}],","," ",RowBox[
+{RowBox[{"(",RowBox[{RowBox[{"#","[",RowBox[{"[","2","]"}],"]"}]," ","-"," ","miny"}],")"}],"*","sy"}],","," ",RowBox[
+{"baseH"," ","+"," ",RowBox[{RowBox[{"(",RowBox[{RowBox[{"#","[",RowBox[{"[","3","]"}],"]"}]," ","-"," ","minz"}],")"}],"*","sz"}]}]}],"}"}]," ","&"}]," ","/@"," ","xyz"}],")"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{"(*"," ",RowBox[{RowBox[{"4."," ","Define"," ","10","x10"," ","grid"}]," ","\[RightArrow]"," ",RowBox[
+{"100"," ","columns"," ","total"}]}]," ","*)"}],"\n",RowBox[{RowBox[{"nx"," ","="," ","25"}],";"," ",RowBox[
+{"ny"," ","="," ","25"}],";"}]}],"\n",RowBox[{RowBox[{"cellX"," ","="," ",RowBox[
+{"targetX","/","nx"}]}],";"," ",RowBox[{"cellY"," ","="," ",RowBox[{"targetY","/","ny"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{"cols"," ","="," ",RowBox[{"Flatten","@",RowBox[{"Table","[","\n","   ",RowBox[
+{RowBox[{"Module","[",RowBox[{RowBox[{"{",RowBox[{RowBox[{"x0"," ","="," ",RowBox[
+{RowBox[{"(",RowBox[{"i"," ","-"," ","1"}],")"}],"*","cellX"}]}],","," ",RowBox[{"y0"," ","="," ",RowBox[
+{RowBox[{"(",RowBox[{"j"," ","-"," ","1"}],")"}],"*","cellY"}]}],",","\n","           ","pts",","," ","zmean"}],"}"}],",","\n","     ",RowBox[
+{RowBox[{"pts"," ","="," ",RowBox[{"Select","[",RowBox[{"scaled",",","\n","       ",RowBox[
+{RowBox[{RowBox[{"x0"," ","\[LessEqual]"," ",RowBox[{"#","[",RowBox[{"[","1","]"}],"]"}]," ","<"," ",RowBox[
+{"x0"," ","+"," ","cellX"}]}]," ","&&"," ",RowBox[{"y0"," ","\[LessEqual]"," ",RowBox[
+{"#","[",RowBox[{"[","2","]"}],"]"}]," ","<"," ",RowBox[{"y0"," ","+"," ","cellY"}]}]}]," ","&"}]}],"]"}]}],";","\n","     ",RowBox[
+{"zmean"," ","="," ",RowBox[{"If","[",RowBox[{RowBox[{RowBox[{"Length","[","pts","]"}]," ","=="," ","0"}],","," ","baseH",","," ",RowBox[
+{"Mean","[",RowBox[{"pts","[",RowBox[{"[",RowBox[{"All",","," ","3"}],"]"}],"]"}],"]"}]}],"]"}]}],";","\n","     ",RowBox[
+{"Cuboid","[",RowBox[{RowBox[{"{",RowBox[{"x0",","," ","y0",","," ","0"}],"}"}],","," ",RowBox[
+{"{",RowBox[{RowBox[{"x0"," ","+"," ","cellX"}],","," ",RowBox[{"y0"," ","+"," ","cellY"}],","," ","zmean"}],"}"}]}],"]"}]}]}],"\n","   ","]"}],",","\n","   ",RowBox[
+{"{",RowBox[{"i",","," ","1",","," ","nx"}],"}"}],","," ",RowBox[{"{",RowBox[{"j",","," ","1",","," ","ny"}],"}"}]}],"\n","]"}]}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{"(*"," ",RowBox[{"5."," ","Combine"," ","base"," ","and"," ","columns"}]," ","*)"}],"\n",RowBox[
+{RowBox[{"gfx"," ","="," ",RowBox[{"Graphics3D","[","\n","  ",RowBox[{RowBox[{"{",RowBox[
+{RowBox[{"GrayLevel","[",".85","]"}],","," ","cols"}],"}"}],",","\n","  ",RowBox[
+{"Boxed"," ","\[Rule]"," ","False"}],","," ",RowBox[{"Lighting"," ","\[Rule]"," ","\"Neutral\""}]}],"\n","]"}]}],";"}]}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{"(*"," ",RowBox[{"6."," ","Export"," ","to"," ","Wolfram"," ","Cloud"}]," ","*)"}],"\n",RowBox[
+{RowBox[{"CloudExport","[",RowBox[{"gfx",","," ","\"STL\"",","," ",RowBox[{"CloudObject","[","\"Group1_Silverstone_STL.stl\"","]"}]}],"]"}],"\n","\n"}]}]}],
+"Input",CellChangeTimes -> {{3969718456.377502`,3969718475.56329`},{3969718549.03444`,3969718555.245343`},{3969718592.979867`,3969718595.047175`},3969718658.702437`,{3969719089.820294`,3969719113.345262`},{3969719196.2601624`,3969719238.5362387`},3969719495.2003403`},
+CellLabel -> "In[378]:= ",ExpressionUUID -> "ac29386d-8c06-479e-ad0f-3cbaec177c3c"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"CloudObject","[",TemplateBox[{"\"https://www.wolframcloud.com/obj/aalemay/Group1_Silverstone_STL.stl\"","https://www.wolframcloud.com/obj/aalemay/Group1_Silverstone_STL.stl"},
+"HyperlinkURL"],"]"}],CloudObject["https://www.wolframcloud.com/obj/aalemay/Group1_Silverstone_STL.stl"],
+SelectWithContents -> True],StandardForm],"Output",CellLabel -> "Out[393]= ",ExpressionUUID -> "fd2e892c-0d98-4fd7-996b-8a7bed1ac775"]},
+Open],ExpressionUUID -> "873d1090-d626-4531-a8e4-4ebefeb36854"]},StyleDefinitions -> "Default.nb",
+WindowSize -> {Full,Full},WindowMargins -> {{316,Automatic},{Automatic,50}},FrontEndVersion -> "14.3 for Wolfram Cloud 1.74 (September 30, 2025)",
+ExpressionUUID -> "e79223d9-443a-4611-bdcd-81d3ef209a81"]
